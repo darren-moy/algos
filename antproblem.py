@@ -18,33 +18,39 @@ In the first line, print M integers in ascending order denoting the positions wh
 """
 
 
-def get_final_pos(mark, ants, secs, ant_position):
-    final_pos = []
+def calculate_final_positions(N, M, T, ant_positions):
+    final_positions = []
 
-    for ant in ant_position:
+    for ant in ant_positions:
         position, direction = ant
 
-        displacement = (secs * direction) % mark            #to get how many marks it moves
-        final_pos = (position + displacement)               #to get the final position
+        # Calculate the net displacement after T seconds
+        displacement = (T * direction) % N
 
-        if final_pos == 0:
-            final_pos = mark
+        # Calculate the final position
+        final_position = (position + displacement) % N
 
-        final_pos.append(final_pos)
+        # Handle the case where the final position becomes 0
+        if final_position == 0:
+            final_position = N
 
-    final_pos.sort()
-    return final_pos
+        final_positions.append(final_position)
+
+    final_positions.sort()
+    return final_positions
 
 
+# Read input
 N, M, T = map(int, input().split())
-ant_pos = []
+ant_positions = []
 for _ in range(M):
     position, direction = map(int, input().split())
-    ant_pos.append((position, direction))
+    ant_positions.append((position, direction))
 
-res = get_final_pos(N, M, T, ant_pos)
+# Get final positions
+result = calculate_final_positions(N, M, T, ant_positions)
 
-for position in res:
+# Print final positions
+for position in result:
     print(position, end=' ')
-
 
