@@ -14,8 +14,6 @@ for i in range(size):
 
         if not swapped:
             break
-
-for _ in range(size):
-    print(arr[_])
 print("the number of swaps are: ", swaps)
 
+print(arr)

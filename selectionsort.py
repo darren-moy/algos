@@ -18,6 +18,7 @@ arr = [5, 3, 8, 2, 1]
 selection_sort_small(arr)
 print(arr)
 
+
 def selection_sort_max(arr):
     n = len(arr)
 
@@ -31,6 +32,7 @@ def selection_sort_max(arr):
 
         # Swap the minimum element with the current element
         arr[i], arr[max_idx] = arr[max_idx], arr[i]
+
 
 # Example usage:
 arr = [5, 3, 8, 2, 1]

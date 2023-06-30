@@ -2,10 +2,10 @@ def insertion_sort(arr):
     n = len(arr)
 
     for i in range(n):
-        temp = arr[i]       #storing current element whose left side is checked for its correct position
+        temp = arr[i]       #storing current element whose left side is checked for its correct position / temp equals the value at i
         j = i
 
-        while (j > 0 and temp < arr[j - 1]):    #check whether adjacent element on left side is >= current element
+        while (j > 0 and temp < arr[j - 1]):    #check whether adjacent element on left side is >= current element, first condition makes it loop throughout to check
             arr[j] = arr[j-1]                   #move left side element to one position forward
             j = j - 1
 
