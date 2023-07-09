@@ -34,7 +34,9 @@ def selection_sort_max(arr):
         arr[i], arr[max_idx] = arr[max_idx], arr[i]
 
 
-# Example usage:
+"""
+Example usage:
 arr = [5, 3, 8, 2, 1]
-selection_sort_max(arr)
+selection_sort_small(arr)
 print(arr)
+"""
