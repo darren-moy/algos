@@ -3,8 +3,8 @@ def insertion_sort(bucket):
         temp = bucket[i]
         j = i
 
-        while j > 0 and temp < bucket[j - 1]:
-            bucket[j] = bucket[j-1]
+        while j > 0 and temp < bucket[j - 1]:   # compare the entire left side of the element
+            bucket[j] = bucket[j-1]             # shift left if conditions are met
             j -= 1
 
         bucket[j] = temp
@@ -36,7 +36,7 @@ def bucket_sort(arr):
     return sorted_arr
 
 
-arr = [5, 2, 4, 6, 5.1 , 10]
+arr = [5, 2, 4, 6, 5.1, 10]
 sorted_arr = bucket_sort(arr)
 print(sorted_arr)
 
