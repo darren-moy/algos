@@ -13,6 +13,3 @@ def count_sort(arr):
         count[num] -= 1
 
     return output
-
-
-
