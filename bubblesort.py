@@ -26,6 +26,8 @@ if __name__ == "__main__":
             try:
                 elements = input("Please enter the elements with a space in between them: ").split()
                 inp_arr = [int(element) for element in elements]
+                if len(inp_arr) >= 1:
+                    print('You have only entered one integer')
                 output = bubble_sort(inp_arr)
                 if orientation == 2:
                     output.reverse()
@@ -52,10 +54,11 @@ if __name__ == "__main__":
         elif choice == 2:
             try:
                 elements = input("Please enter the elements with a space in between each: ").split()
+                if len(elements) >= 1:
+                    print('You have only entered one integer.')
                 output = bubble_sort(elements)
                 if orientation == 2:
                     output = output[::-1]
-                    print(output)
                 choice_2 = int(input("Please enter 1 to get the minimum element, 2 for the maximum element, 3 for both, and 4 for neither: "))
                 if choice_2 == 1:
                     if orientation == 2:
