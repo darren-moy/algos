@@ -18,15 +18,13 @@ def bubble_sort(arr):
 
 if __name__ == "__main__":
     try:
-        orientation = int(
-            input("Please enter 1 if you would like the sort to be in increasing order and 2 for decreasing order: "))
-        choice = int(
-            input("Please enter 1 for sorting integers and 2 for sorting multiple strings by the first letter: "))
+        orientation = int(input("Please enter 1 if you would like the sort to be in increasing order and 2 for decreasing order: "))
+        choice = int(input("Please enter 1 for sorting integers and 2 for sorting multiple strings by the first letter: "))
         if choice == 1:
             try:
                 elements = input("Please enter the elements with a space in between them: ").split()
                 inp_arr = [int(element) for element in elements]
-                if len(inp_arr) >= 1:
+                if len(inp_arr) <= 1:
                     print('You have only entered one integer')
                 output = bubble_sort(inp_arr)
                 if orientation == 2:
@@ -54,7 +52,7 @@ if __name__ == "__main__":
         elif choice == 2:
             try:
                 elements = input("Please enter the elements with a space in between each: ").split()
-                if len(elements) >= 1:
+                if len(elements) <= 1:
                     print('You have only entered one integer.')
                 output = bubble_sort(elements)
                 if orientation == 2:
