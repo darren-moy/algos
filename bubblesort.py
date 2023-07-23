@@ -59,27 +59,23 @@ if __name__ == "__main__":
                 choice_2 = int(input("Please enter 1 to get the minimum element, 2 for the maximum element, 3 for both, and 4 for neither: "))
                 if choice_2 == 1:
                     if orientation == 2:
-                        print(f"The sorted elements are: {output}. The minimum element is {output[-1]}. Have a nice day!")
+                        print(f'The sorted elements are: "{output}". The minimum element is "{output[-1]}". Have a nice day!')
                     else:
-                        print(f"The sorted elements are: {output}. The minimum element is {output[0]}. Have a nice day!")
+                        print(f'The sorted elements are: "{output}". The minimum element is "{output[0]}". Have a nice day!')
                 elif choice_2 == 2:
                     if orientation == 2:
-                        print(f"The sorted elements are: {output}. The maximum element is {output[0]}. Have a nice day!")
+                        print(f'The sorted elements are: "{output}". The maximum element is "{output[0]}". Have a nice day!')
                     else:
-                        print(
-                            f"The sorted elements are: {output}. The maximum element is {output[-1]}. Have a nice day!")
+                        print(f'The sorted elements are: "{output}". The maximum element is "{output[-1]}". Have a nice day!')
                 elif choice_2 == 3:
                     if orientation == 2:
-                        print(f"The sorted elements are: {output}. The minimum element is {output[-1]} and the maximum element is {output[0]}. Have a nice day!")
+                        print(f'The sorted elements are: "{output}". The minimum element is "{output[-1]}" and the maximum element is "{output[0]}". Have a nice day!')
                     else:
-                        print(f"The sorted elements are: {output}. The minimum element is {output[0]} and the maximum element is {output[-1]}. Have a nice day!")
+                        print(f'The sorted elements are: "{output}". The minimum element is "{output[0]}" and the maximum element is "{output[-1]}". Have a nice day!')
                 elif choice_2 == 4:
-                    print(f"The sorted elements are: {output}. Have a nice day!")
+                    print(f'The sorted elements are: {output}. Have a nice day!')
             except ValueError:
                 print("Invalid input, please try again with a valid input.")
     except ValueError:
         print("Invalid input, please try again with valid input.")
-
-
-
 
